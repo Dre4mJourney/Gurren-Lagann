@@ -2,49 +2,181 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TENGEN TOPPA GURREN LAGANN</title>
+  <!-- Importando uma fonte futurista do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
   <style>
+    /* Reset básico e configurações do corpo da página */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background-image: url('https://i.pinimg.com/1200x/45/38/bb/4538bb645996c3522051af86cb9d9886.jpg');
+      /* Escurece levemente a imagem de fundo para destacar o conteúdo */
+      background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(15, 0, 0, 0.75)), 
+                  url('https://i.pinimg.com/1200x/45/38/bb/4538bb645996c3522051af86cb9d9886.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
+      font-family: 'Roboto', sans-serif;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 30px 15px;
+    }
+
+    /* Container Principal (Efeito Vidro) */
+    .container-principal {
+      width: 100%;
+      max-width: 750px;
+      background: rgba(18, 18, 24, 0.75);
+      backdrop-filter: blur(10px); /* Desfoque no fundo */
+      -webkit-backdrop-filter: blur(10px);
+      border: 2px solid #ff2a2a;
+      border-radius: 20px;
+      padding: 40px 30px;
+      box-shadow: 0 0 30px rgba(255, 42, 42, 0.5), inset 0 0 15px rgba(57, 255, 20, 0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    /* Cabeçalho */
+    .cabecalho {
+      text-align: center;
+      border-bottom: 2px solid rgba(255, 42, 42, 0.5);
+      padding-bottom: 20px;
+    }
+
+    .cabecalho h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #ffffff;
+      text-shadow: 0 0 10px #ff2a2a, 0 0 20px #ff6a00;
+      margin-bottom: 8px;
+    }
+
+    .subtitulo {
+      color: #39ff14; /* Verde Energia Espiral */
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 3px;
+      text-shadow: 0 0 8px rgba(57, 255, 20, 0.7);
+    }
+
+    /* Cards individuais para cada mídia */
+    .card-midia {
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 106, 0, 0.4);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Efeito ao passar o mouse sobre o card */
+    .card-midia:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(57, 255, 20, 0.3);
+      border-color: #39ff14;
+    }
+
+    .titulo-secao {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
+      color: #ff9900;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    /* Estilização dos players */
+    iframe, video {
+      width: 100%;
+      max-width: 560px;
+      border-radius: 8px;
+      border: 2px solid #ff2a2a;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    }
+
+    audio {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 30px;
+      outline: none;
+    }
+
+    /* Rodapé */
+    .rodape {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #aaaaaa;
+      margin-top: 10px;
+    }
+
+    /* Responsividade para celulares */
+    @media (max-width: 600px) {
+      .cabecalho h1 {
+        font-size: 1.5rem;
+      }
+      iframe, video {
+        height: 220px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1 style="color: white; text-align: center;">Super Tengen Toppa Gurren Lagann</h1>
-<div style="display: flex; justify-content: center;">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/ZxNss-vrB2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-<div style="display: flex; justify-content: center;">
-  <audio controls>
-    <source src="2-22. 'Libera me' from hell.mp3" type="audio/mpeg">
-    Seu navegador não suporta o elemento de áudio.
-  </audio>
-</div>
-  <div style="display: flex; justify-content: center;">
-  <video width="560" height="315" controls poster="capa-do-video.jpg">
-    <source src="-paJdc.mp4" type="video/mp4">
-    Seu navegador não suporta a tag de vídeo.
-  </video>
+
+  <!-- Div principal que centraliza e agrupa tudo -->
+  <div class="container-principal">
+    
+    <!-- Div do Título -->
+    <div class="cabecalho">
+      <h1>Super Tengen Toppa Gurren Lagann</h1>
+      <p class="subtitulo">"A minha broca é a broca que vai perfurar os céus!"</p>
+    </div>
+
+    <!-- Div do Vídeo do YouTube -->
+    <div class="card-midia">
+      <h2 class="titulo-secao">🔥 Cena Épica (YouTube)</h2>
+      <iframe height="315" src="https://www.youtube.com/embed/ZxNss-vrB2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- Div do Áudio -->
+    <div class="card-midia">
+      <h2 class="titulo-secao">🎵 Trilha Sonora: "Libera Me" From Hell</h2>
+      <audio controls>
+        <source src="2-22. 'Libera me' from hell.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+      </audio>
+    </div>
+
+    <!-- Div do Vídeo Local -->
+    <div class="card-midia">
+      <h2 class="titulo-secao">🎬 Arquivo de Vídeo Local</h2>
+      <video height="315" controls poster="capa-do-video.jpg">
+        <source src="-paJdc.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+      </video>
+    </div>
+
+    <!-- Div de Rodapé -->
+    <div class="rodape">
+      <p>Dai-Gurren Brigade &copy; 2026</p>
+    </div>
+
   </div>
-  
-  
-  
 
-
-
-
-
-
-
-
-
-
-
-
-  
 </body>
 </html>
