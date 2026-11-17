@@ -4,11 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TENGEN TOPPA GURREN LAGANN</title>
-  <!-- Importando uma fonte futurista do Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   
   <style>
-    /* Reset básico e configurações do corpo da página */
     * {
       margin: 0;
       padding: 0;
@@ -16,167 +14,162 @@
     }
 
     body {
-      /* Escurece levemente a imagem de fundo para destacar o conteúdo */
-      background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(15, 0, 0, 0.75)), 
-                  url('https://i.pinimg.com/1200x/45/38/bb/4538bb645996c3522051af86cb9d9886.jpg');
+      background-image: url('https://i.pinimg.com/1200x/45/38/bb/4538bb645996c3522051af86cb9d9886.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
       font-family: 'Roboto', sans-serif;
       color: #ffffff;
+      
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       min-height: 100vh;
-      padding: 30px 15px;
+      padding: 40px 5%;
     }
 
-    /* Container Principal (Efeito Vidro) */
-    .container-principal {
+    /* Substitui a div principal por <main> */
+    main {
       width: 100%;
-      max-width: 750px;
-      background: rgba(18, 18, 24, 0.75);
-      backdrop-filter: blur(10px); /* Desfoque no fundo */
-      -webkit-backdrop-filter: blur(10px);
-      border: 2px solid #ff2a2a;
-      border-radius: 20px;
-      padding: 40px 30px;
-      box-shadow: 0 0 30px rgba(255, 42, 42, 0.5), inset 0 0 15px rgba(57, 255, 20, 0.2);
+      max-width: 580px;
+      background: rgba(10, 10, 15, 0.35);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 42, 42, 0.7);
+      border-radius: 16px;
+      padding: 30px 25px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 22px;
     }
 
-    /* Cabeçalho */
-    .cabecalho {
+    /* Substitui a div do cabeçalho por <header> */
+    header {
       text-align: center;
-      border-bottom: 2px solid rgba(255, 42, 42, 0.5);
-      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 42, 42, 0.6);
+      padding-bottom: 15px;
     }
 
-    .cabecalho h1 {
+    header h1 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 2.2rem;
+      font-size: 1.8rem;
       text-transform: uppercase;
       letter-spacing: 2px;
       color: #ffffff;
-      text-shadow: 0 0 10px #ff2a2a, 0 0 20px #ff6a00;
-      margin-bottom: 8px;
+      text-shadow: 2px 2px 4px #000000, 0 0 12px #ff2a2a, 0 0 25px #ff6a00;
+      margin-bottom: 6px;
     }
 
-    .subtitulo {
-      color: #39ff14; /* Verde Energia Espiral */
+    header p {
+      color: #39ff14;
       font-family: 'Orbitron', sans-serif;
-      font-size: 0.9rem;
-      letter-spacing: 3px;
-      text-shadow: 0 0 8px rgba(57, 255, 20, 0.7);
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 3px #000000, 0 0 8px rgba(57, 255, 20, 0.8);
     }
 
-    /* Cards individuais para cada mídia */
-    .card-midia {
-      background: rgba(0, 0, 0, 0.6);
-      border: 1px solid rgba(255, 106, 0, 0.4);
+    /* Substitui as divs de cards por <section> */
+    section {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 106, 0, 0.45);
       border-radius: 12px;
-      padding: 20px;
+      padding: 15px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
     }
 
-    /* Efeito ao passar o mouse sobre o card */
-    .card-midia:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(57, 255, 20, 0.3);
+    section:hover {
+      background: rgba(0, 0, 0, 0.55);
+      transform: translateX(6px);
       border-color: #39ff14;
     }
 
-    .titulo-secao {
+    section h2 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.1rem;
-      color: #ff9900;
-      margin-bottom: 15px;
+      font-size: 0.95rem;
+      color: #ffaa00;
+      margin-bottom: 12px;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 4px #000000;
     }
 
-    /* Estilização dos players */
     iframe, video {
       width: 100%;
-      max-width: 560px;
+      height: 260px;
       border-radius: 8px;
-      border: 2px solid #ff2a2a;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+      border: 1px solid rgba(255, 42, 42, 0.8);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
     }
 
     audio {
       width: 100%;
-      max-width: 500px;
+      height: 40px;
       border-radius: 30px;
-      outline: none;
+      opacity: 0.9;
     }
 
-    /* Rodapé */
-    .rodape {
+    /* Substitui a div de rodapé por <footer> */
+    footer {
       text-align: center;
-      font-size: 0.85rem;
-      color: #aaaaaa;
-      margin-top: 10px;
+      font-size: 0.8rem;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px #000000;
     }
 
-    /* Responsividade para celulares */
-    @media (max-width: 600px) {
-      .cabecalho h1 {
-        font-size: 1.5rem;
+    @media (max-width: 768px) {
+      body {
+        justify-content: center;
+        padding: 20px 15px;
+      }
+      header h1 {
+        font-size: 1.4rem;
       }
       iframe, video {
-        height: 220px;
+        height: 200px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Div principal que centraliza e agrupa tudo -->
-  <div class="container-principal">
+  <main>
     
-    <!-- Div do Título -->
-    <div class="cabecalho">
+    <header>
       <h1>Super Tengen Toppa Gurren Lagann</h1>
-      <p class="subtitulo">"A minha broca é a broca que vai perfurar os céus!"</p>
-    </div>
+      <p>"A minha broca é a broca que vai perfurar os céus!"</p>
+    </header>
 
-    <!-- Div do Vídeo do YouTube -->
-    <div class="card-midia">
-      <h2 class="titulo-secao">🔥 Cena Épica (YouTube)</h2>
-      <iframe height="315" src="https://www.youtube.com/embed/ZxNss-vrB2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
+    <section>
+      <h2>🔥 Cena Épica (YouTube)</h2>
+      <iframe src="https://www.youtube.com/embed/ZxNss-vrB2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
 
-    <!-- Div do Áudio -->
-    <div class="card-midia">
-      <h2 class="titulo-secao">🎵 Trilha Sonora: "Libera Me" From Hell</h2>
+    <section>
+      <h2>🎵 "Libera Me" From Hell</h2>
       <audio controls>
         <source src="2-22. 'Libera me' from hell.mp3" type="audio/mpeg">
         Seu navegador não suporta o elemento de áudio.
       </audio>
-    </div>
+    </section>
 
-    <!-- Div do Vídeo Local -->
-    <div class="card-midia">
-      <h2 class="titulo-secao">🎬 Arquivo de Vídeo Local</h2>
-      <video height="315" controls poster="capa-do-video.jpg">
+    <section>
+      <h2>🎬 Vídeo Local</h2>
+      <video controls poster="capa-do-video.jpg">
         <source src="-paJdc.mp4" type="video/mp4">
         Seu navegador não suporta a tag de vídeo.
       </video>
-    </div>
+    </section>
 
-    <!-- Div de Rodapé -->
-    <div class="rodape">
+    <footer>
       <p>Dai-Gurren Brigade &copy; 2026</p>
-    </div>
+    </footer>
 
-  </div>
+  </main>
 
 </body>
 </html>
